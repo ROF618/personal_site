@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Low Tier XSSHUNTER</title>
+      <link>http://localhost:1313/posts/low_tier_xssh/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/low_tier_xssh/</guid>
+      <description>&lt;p&gt;After a long break I&amp;rsquo;m finally starting to hunt for bugs again. So I thought the first thing I needed to do was set up and update my tools. I knew I needed a way to test for blind XSS. Iammandatory’s XSSHunter is a tool I used extensively back when I had access to a more capable VPS. Due to my job being slightly inconsistent, I decided to go to a cheaper box, and unfortunately XSSHunter needed more ram. So I decided use a similar stack and build something that would fit my needs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thinkpad Bypass</title>
+      <link>http://localhost:1313/posts/thinkpad_bypass/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/thinkpad_bypass/</guid>
+      <description>&lt;p&gt;Sometime in December of 2025 I updated my Fedora 40 system and something must have triggered the Supervisor Password(SP). This happened at the same time when my storage had become full. With the disk full and the SP enabled, I was stuck in a boot loop.&lt;/p&gt;&#xA;&lt;p&gt;With the SP, the system would only get past the GRUB menu and prompt for the SP. The system allowed for me to simply hit enter, and it would take you to the BIOS settings but the system did not allow for any changes to the settings.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
