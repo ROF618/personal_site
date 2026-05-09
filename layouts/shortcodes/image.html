@@ -1,0 +1,20 @@
+{{- $src := .Get "src" -}}
+{{- if $src -}}
+  {{- $isExternal := or (hasPrefix $src "http://") (hasPrefix $src "https://") -}}
+  {{- if $isExternal -}}
+    <img src="{{ $src | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} {{ with .Get "width" }} width="{{ . | plainify }}" {{ end }} {{ with .Get "height" }} height="{{ . | plainify }}" {{ end }} />
+  {{- else -}}
+    {{- $image := .Page.Resources.GetMatch $src -}}
+    {{- if not $image -}}
+      {{- $assetPath := strings.TrimPrefix "/" $src -}}
+      {{- $image = resources.Get $assetPath -}}
+    {{- end -}}
+
+    {{- if $image -}}
+      {{- $scaled := $image.Resize "800x1000" -}}
+      <img src="{{ $scaled.RelPermalink }}" width="{{ $scaled.Width }}" height="{{ $scaled.Height }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} />
+    {{- else -}}
+      <img src="{{ $src | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} {{ with .Get "width" }} width="{{ . | plainify }}" {{ end }} {{ with .Get "height" }} height="{{ . | plainify }}" {{ end }} />
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

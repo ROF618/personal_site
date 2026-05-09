@@ -1,0 +1,20 @@
+{{- $resp := "" -}}
+{{- $src := .Destination -}}
+{{- $isExternal := or (hasPrefix $src "http://") (hasPrefix $src "https://") -}}
+
+{{- if $isExternal -}}
+  <img src="{{ $src | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} />
+{{- else -}}
+  {{- $image := .Page.Resources.GetMatch $src -}}
+  {{- if not $image -}}
+    {{- $assetPath := strings.TrimPrefix "/" $src -}}
+    {{- $image = resources.Get $assetPath -}}
+  {{- end -}}
+
+  {{- if $image -}}
+    {{- $scaled := $image.Resize "800x1000" -}}
+    <img src="{{ $scaled.RelPermalink }}" width="{{ $scaled.Width }}" height="{{ $scaled.Height }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} />
+  {{- else -}}
+    <img src="{{ $src | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} />
+  {{- end -}}
+{{- end -}}
