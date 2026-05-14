@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://cbravo.xyz/</loc>
     <lastmod>2026-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/low_tier_xssh/</loc>
+    <loc>https://cbravo.xyz/posts/low_tier_xssh/</loc>
     <lastmod>2026-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://cbravo.xyz/posts/</loc>
     <lastmod>2026-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://cbravo.xyz/about/</loc>
     <lastmod>2026-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/thinkpad_bypass/</loc>
+    <loc>https://cbravo.xyz/posts/thinkpad_bypass/</loc>
     <lastmod>2026-02-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://cbravo.xyz/contact/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://cbravo.xyz/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://cbravo.xyz/tags/</loc>
   </url>
 </urlset>
